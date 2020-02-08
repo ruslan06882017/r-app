@@ -1,10 +1,10 @@
 import React from "react";
 
 const WelcomeScreen = (props) => {
-    // eslint-disable-next-line react/prop-types
+  // eslint-disable-next-line react/prop-types
     const {errorsCount} = props;
     return (
-        <section className="welcome">
+      <section className="welcome">
         <div className="welcome__logo">
           <img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83"/>
         </div>
