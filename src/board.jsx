@@ -4,7 +4,7 @@ import Cell from "./cell.jsx";
 export default class Board extends React.Component {
 
   renderCell(i) {
-    return <Cell value={i} onClick={() => console.log(`Clicked on cell`)} />;
+    return <Cell value={i} onClick={() => {}} />;
   }
 
   render() {

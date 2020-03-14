@@ -1,49 +1,39 @@
 body {
-  margin: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
-ol, ul {
-  padding-left: 30px;
+.app {
+  max-width: 1000px;
+  margin: 50px auto;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
+.list {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 
-.game-info {
-  margin-left: 20px;
+.card {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, .15);
+}
+
+.card.marked {
+  border: 2px solid crimson;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.card img {
+  width: 100%;
 }
