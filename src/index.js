@@ -33,8 +33,25 @@ class App extends React.Component {
         {marked: false, name: `Audi TT`, price: 15000, img: `https://article.images.consumerreports.org/w_598,h_436/prod/content/dam/cro/news_articles/cars/2016-Audi-TT-pr-1-2016-598`},
         {marked: false, name: `Rolls Royce`, price: 50000, img: `http://cdn-ds.com/stock/2017-Bentley-Continental-GT-V8-Coupe--Beverly-Hills-CA/seo/VAMP16966-SCBFT7ZA0HC061335/sz_108215/image-1.jpg`},
         {marked: false, name: `Mercedes amg coupe`, price: 18000, img: `https://auto.ndtvimg.com/car-images/big/mercedes-amg/gle-coupe/mercedes-amg-gle-coupe.jpg?v=2`}
-      ]
+      ],
+      visible: true,
+      appTitle: `My title name`
     };
+  }
+
+  handleTitleChange(value) {
+    if (value.trim() === ``) {
+      return;
+    }
+    this.setState({
+      appTitle: value
+    });
+  }
+
+  handleToggle() {
+    // eslint-disable-next-line no-console
+    // console.log(`Toggled`);
+    this.setState({visible: !this.state.visible});
   }
 
   handleMarked(name) {
@@ -45,6 +62,9 @@ class App extends React.Component {
   }
 
   renderCars() {
+    if (!this.state.visible) {
+      return null;
+    }
     return this.state.cars.map((car) => {
       return (
         <Car car={car}
@@ -58,6 +78,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <h1> {this.state.appTitle}</h1>
+        <button onClick={() => this.handleToggle()}>Toggle</button>
+        <input
+          type="text"
+          placeholder={`The title of page`}
+          onChange = {(e) => this.handleTitleChange(e.target.value)}
+        />
+        <hr/>
         <div className="list">
           {this.renderCars()}
         </div>
