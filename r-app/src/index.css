@@ -1,0 +1,30 @@
+nav ul {
+  display: flex;
+}
+
+nav ul li{
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav ul li a{
+  font-size: 18px;
+}
+
+nav ul li a:active{
+  font-size: 20px;
+  color: brown;
+}
+
+.content {
+  font-size: 18px;
+}
+
+.car {
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.car h1{
+  font-size: 18px;
+
+}
