@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Cars from './cars/cars.jsx';
+import CarDetail from './car-detail/car-detail.jsx';
 import About from './about/about.jsx';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink,Route, Switch, Redirect } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,11 +16,13 @@ function App() {
           </ul>
         </nav>
       </div>
-      <div>
-        <Route path="/" render={() => <h1>Home page</h1>} />
+      <Switch>
+        <Route path="/" exact render={() => <h1>Home page</h1>} />
         <Route path="/about" component={About} />
+        <Route path="/cars/:name" component={CarDetail} />
         <Route path="/cars" component={Cars} />
-      </div>
+        <Redirect to={"/"} />
+      </Switch>
     </React.Fragment>
   );
 }

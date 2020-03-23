@@ -30,7 +30,6 @@ class Cars extends Component {
                                 key={index}
                                 car={car.name}
                                 year={car.year}
-                                {...this.props}
                             />
                         )
                     })}

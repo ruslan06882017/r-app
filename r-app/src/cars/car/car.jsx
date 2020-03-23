@@ -1,11 +1,15 @@
 import React,{Component} from 'react';
+import {withRouter} from 'react-router-dom';
 
 const Car = (props) => {
 
     return (
         <div className="content">
             <div className="car">
-                <h1>{props.car}</h1>
+                <h1 
+                    onClick={() => props.history.push('/cars/' + props.car.toLowerCase())}>
+                    {props.car}
+                </h1>
                 <p>
                     {props.year}
                 </p>
@@ -14,4 +18,4 @@ const Car = (props) => {
     )
 }
 
-export default Car;
+export default withRouter(Car);
