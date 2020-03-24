@@ -26,7 +26,7 @@ class App extends Component {
             </ul>
           </nav>
           <p>{this.state.loggedIn ? 'Hello, Ruslan' : 'Please log in'}</p>
-          <button onClick={() => this.setState({loggedIn: true})}> Log in </button>
+          <button onClick={() => this.setState({loggedIn: true})}> Log in. </button>
         </div>
         <Switch>
           <Route path="/" exact render={() => <h1>Home page</h1>} />

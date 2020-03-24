@@ -3,15 +3,16 @@ import React, {Component} from 'react';
 class Auth extends Component {
 
     loginHandler = () => {
-
+        // Login
     }
 
     registerHandler = () => {
-
+        // Register
     }
 
     submitHandler = (event) => {
         event.preventDefault();
+        
     }
     render(){
         return (
